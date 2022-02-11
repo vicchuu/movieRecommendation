@@ -1,6 +1,6 @@
 #""""Movie recommendation system...""""
 import pandas as ps
-
+import pickle as pk
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 dataset=ps.read_csv("movies.csv")
@@ -126,4 +126,4 @@ for key in range(10):
         st.write(key," . ",title , " rating :", rating)
 st.sidebar.write("This is side bar in streamLit")
 selectedOption=st.sidebar.selectbox("select any 1 option",("option 1","option 2","option 3"))
-selectedSex=st.sidebar.slider("Select your age. ",18,29,90,colorsys="purple")
+selectedSex=st.sidebar.slider("Select your age. ",18,29,90)
