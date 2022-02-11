@@ -83,7 +83,7 @@ movieName="action"#input("Please enter your interested Generes  :")#"SpiderMan"
 
 movieList=((dataset["title"])).to_list()
 
-print(movieList[0])
+st.write(movieList[0])
 
 
 import difflib as df
@@ -124,3 +124,6 @@ for key in range(10):
      rating =dataset["vote_average"][index]
      if rating>5.0:
         st.write(key," . ",title , " rating :", rating)
+st.sidebar.write("This is side bar in streamLit")
+selectedOption=st.sidebar.selectbox("select any 1 option",("option 1","option 2","option 3"))
+selectedSex=st.sidebar.slider("Select your age. ",18,29,90,colorsys="purple")
